@@ -1,18 +1,16 @@
 <?php
 
-abstract class Printer {
-    public function toPrinter(){
-    return 'hp printing date!!!';
-    }
+interface Printer {
+    public function toPrinter();
 
 }
-class hpPrinter extends Printer{
+class hpPrinter implements Printer{
     public function toPrinter(){
         return 'hp printing date!!!';
     }
 
 }
-class brotherPrinter extends Printer{
+class brotherPrinter implements Printer{
     public function toPrinter(){
         return 'Brother printing date!!!';
     }
